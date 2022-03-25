@@ -1,6 +1,6 @@
 ---
 
-home: {{ lookup('env','HOME') }}"
+home: "{{ lookup('env','HOME') }}"
 
 nextflow_version: 21.10.6
 
