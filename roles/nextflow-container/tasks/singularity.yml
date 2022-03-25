@@ -17,10 +17,11 @@
    mode: 0755
 
 - name: singularity | install go
-  shell: "tar -C /usr/local -xzf {{ home }}/go{{ go_version  }}.linux-amd64.tar.gz"
-  become: yes
+  unarchive:
+    src: {{ home }}/go{{ go_version  }}.linux-amd64.tar.gz
+    dest: /usr/local
 
-- name: singularity| check if go is in PATH
+- name: singularity | check if go is in PATH
   shell: "grep go ~/.bashrc"
   register: goinpath
   ignore_errors: True
@@ -68,9 +69,16 @@
   when: singularityinpath.stdout == ""
 
 - name: singularity | remove singularity source code
-  shell: "rm -rf {{ home }}/singularity"
-  become: yes
+  file:
+    path: "{{ home }}/singularity"
+    state: absent
 
 - name: singularity | remove go tar
-  shell: "rm -f {{ home }}/go{{ go_version }}.linux-amd64.tar.gz"
-  become: yes
+  file:
+    path: "{{ home }}/go{{ go_version }}.linux-amd64.tar.gz"
+    state: absent
+
+- name: singularity | source bashrc
+  shell: "source ~/.bashrc"
+  args:
+    executable: /bin/bash
