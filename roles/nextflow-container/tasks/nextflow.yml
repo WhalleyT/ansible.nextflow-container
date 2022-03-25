@@ -1,0 +1,10 @@
+---
+- name: nextflow | install nextflow
+  shell: "wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v{{ nextflow_version }}/nextflow-{{ nextflow_version }}-all | bash"
+
+- name: nextflow | make nextflow executable
+  shell: "chmod +x nextflow"
+
+- name: nextflow | mv nextflow to bin
+  shell: "mv nextflow /usr/local/bin/nextflow"
+  become: yes
