@@ -16,7 +16,7 @@
 
 - name: create directory
   file:
-    path: {{ home }}/genome_tools
+    path: "{{ home }}/genome_tools"
     state: directory
     mode: 0775
 

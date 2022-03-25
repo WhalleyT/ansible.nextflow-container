@@ -12,13 +12,13 @@
 
 - name: singularity | grab installer for go
   get_url:
-   url: https://dl.google.com/go/go{{ go_version }}.linux-amd64.tar.gz
-   dest: {{ home }}
+   url: "https://dl.google.com/go/go{{ go_version }}.linux-amd64.tar.gz"
+   dest: "{{ home }}"
    mode: 0755
 
 - name: singularity | install go
   unarchive:
-    src: {{ home }}/go{{ go_version  }}.linux-amd64.tar.gz
+    src: "{{ home }}/go{{ go_version }}.linux-amd64.tar.gz"
     dest: /usr/local
 
 - name: singularity | check if go is in PATH
@@ -39,7 +39,7 @@
 - name: singularity | clone the Singularity repository
   git:
     repo: https://github.com/sylabs/singularity.git
-    version: {{ singularity_version }}
+    version: "{{ singularity_version }}"
     dest: "{{ home }}/singularity/src/github.com/sylabs/singularity"
 
 - name: singularity | compile the Singularity binary | mconfig
