@@ -17,9 +17,8 @@
    mode: 0755
 
 - name: singularity | install go
-  unarchive:
-    src: "{{ home }}/go{{ go_version }}.linux-amd64.tar.gz"
-    dest: /usr/local
+  shell: "tar -C /usr/local -xzf {{ home }}/go{{ go_version }}.linux-amd64.tar.gz"
+  become: yes
 
 - name: singularity | check if go is in PATH
   shell: "grep go ~/.bashrc"
