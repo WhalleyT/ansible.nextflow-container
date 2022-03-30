@@ -25,7 +25,8 @@ jobs:
       - name: test VG_1
         working-directory: /home/runner/VG_1
         run: |
-          source ~/.bashrc
+          echo "/usr/local/go/bin" >> $GITHUB_PATH
+          echo "/usr/local/singularity/bin" >> $GITHUB_PATH
           mkdir input_tool1
           wget -O input_tool1/test.fa https://www.ebi.ac.uk/ena/browser/api/fasta/GCA_002849515.1
           nextflow run tool_1.nf
