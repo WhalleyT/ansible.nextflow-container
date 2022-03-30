@@ -20,6 +20,12 @@
     state: directory
     mode: 0775
 
+- name: clone the VG1 repository
+  git:
+    repo: https://github.com/AmyBaldwin/VG_1.git
+    version: master
+    dest: "{{ home }}/VG_1"
+
 - name: install nextflow
   include_tasks: nextflow.yml
 
