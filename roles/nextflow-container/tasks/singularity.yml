@@ -68,14 +68,12 @@
   when: singularityinpath.stdout == ""
 
 - name: singularity | remove singularity source code
-  file:
-    path: "{{ home }}/singularity"
-    state: absent
+  shell: "rm -rf {{ home }}/singularity"
+  become: yes
 
 - name: singularity | remove go tar
-  file:
-    path: "{{ home }}/go{{ go_version }}.linux-amd64.tar.gz"
-    state: absent
+  shell: "rm -f {{ home }}/go{{ go_version }}.linux-amd64.tar.gz"
+  become: yes
 
 - name: singularity | source bashrc
   shell: "source ~/.bashrc"
