@@ -21,3 +21,10 @@ jobs:
           playbook: playbook.yml
           options: |
             --verbose
+
+      - name: test VG_1
+        run: |
+          cd VG_1
+          mkdir input_tool1
+          wget -O input_tool1/test2.fa https://www.ebi.ac.uk/ena/browser/api/fasta/GCA_002849515.1
+          nextflow run tool_1.nf
