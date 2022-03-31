@@ -1,3 +1,4 @@
+![Build Status](https://github.com/annacprice/ansible.nextflow-container/workflows/ansible-ci/badge.svg)
 # ansible.nextflow-container
 
 This playbook installs the following
@@ -13,8 +14,8 @@ This repo also contains a GitHub Actions workflow which tests the playbook.
 ## Install instructions
 Install ansible
 ```
-sudo apt-get update
-sudo apt-get install ansible
+sudo apt update
+sudo apt install ansible
 ```
 
 Clone the repo
@@ -50,6 +51,8 @@ This can be changed to another Ubuntu environment e.g. `ubuntu-18.04` (note that
 and that this playbook can only run on Ubuntu servers). 
 More information on GitHub environments can be found [here](https://github.com/actions/virtual-environments).
 
-If the GitHub Actions workflow run is successful, you'll see a green tick next to the commit, failed runs show a red cross. 
+If the GitHub Actions workflow run is successful, you'll see a green tick next to the commit, failed runs show a red cross.
+You can also check the badge at the top of the README for the build status.
 To investigate a failed run, look under the Actions tab at the top of the page for more information, 
 then click on the failed run and then click build.
+The workflow can also be manually run through the Actions tab.
