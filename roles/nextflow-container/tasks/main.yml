@@ -11,20 +11,9 @@
           - build-essential
           - git
           - pkg-config
+          - default-jre
       state: latest
   become: true
-
-- name: create directory
-  file:
-    path: "{{ home }}/genome_tools"
-    state: directory
-    mode: 0775
-
-- name: clone the VG1 repository
-  git:
-    repo: https://github.com/AmyBaldwin/VG_1.git
-    version: master
-    dest: "{{ home }}/genome_tools/VG_1"
 
 - name: install nextflow
   include_tasks: nextflow.yml
