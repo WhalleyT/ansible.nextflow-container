@@ -2,12 +2,12 @@ name: ansible-ci
 
 on:
   push:
-    branches: [ master ]
+    branches: [ lodestone ]
     paths-ignore:
       - '**/README.md'
 
   pull_request:
-    branches: [ master ]
+    branches: [ lodestone ]
 
   workflow_dispatch:
 
