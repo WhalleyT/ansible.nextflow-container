@@ -23,3 +23,6 @@
 
 - name: install singularity
   include_tasks: singularity.yml
+
+- name: setup lodestone
+  include_tasks: lodestone.yml
