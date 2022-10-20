@@ -12,6 +12,7 @@
           - git
           - pkg-config
           - default-jre
+          - unzip
       state: latest
   become: true
 
