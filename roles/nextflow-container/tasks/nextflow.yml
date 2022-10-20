@@ -4,7 +4,7 @@
 
 - name: nextflow | set permissions
   file:
-    src: nextflow
+    path: nextflow
     mode: a+x
 
 - name: nextflow | move nextflow to bin
