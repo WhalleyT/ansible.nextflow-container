@@ -1,8 +1,8 @@
 ![Build Status](https://github.com/annacprice/ansible.nextflow-container/workflows/ansible-ci/badge.svg)
 # ansible.nextflow-container
 
-This playbook installs the following
-* [Nextflow](https://www.nextflow.io) 21.10.6
+This playbook setups the lodestone Nextflow DSL2 pipeline (https://github.com/Pathogen-Genomics-Cymru/lodestone) and installs the following dependencies for running the pipeline:
+* [Nextflow](https://www.nextflow.io) 20.11.0-edge
 * [Docker](https://www.docker.com) 5:20.10.14\~3-0~ubuntu-focal
 * [Go](https://go.dev) 1.17.8
 * [Singularity](https://sylabs.io/singularity) v3.9.7
@@ -20,7 +20,7 @@ sudo apt install ansible
 
 Clone the repo
 ```
-https://github.com/annacprice/ansible.nextflow-container.git
+git clone https://github.com/annacprice/ansible.nextflow-container.git
 ```
 Run the playbook
 ```
