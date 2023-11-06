@@ -11,6 +11,9 @@
       - libseccomp-dev
       - cryptsetup-bin
       - libfuse3-dev
+      - libglib2.0-dev
+      - autoconf
+      - libtool
   become: true
 
 - name: singularity | grab installer for go
