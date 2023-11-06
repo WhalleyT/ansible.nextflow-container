@@ -6,8 +6,11 @@
       - libssl-dev
       - uuid-dev
       - libgpgme11-dev
+      - libgpgme-dev
       - squashfs-tools
       - libseccomp-dev
+      - cryptsetup-bin
+      - fuse3
   become: true
 
 - name: singularity | grab installer for go
