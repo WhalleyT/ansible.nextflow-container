@@ -10,7 +10,7 @@
       - squashfs-tools
       - libseccomp-dev
       - cryptsetup-bin
-      - fuse3
+      - libfuse3-dev
   become: true
 
 - name: singularity | grab installer for go
