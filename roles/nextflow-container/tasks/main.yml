@@ -16,6 +16,18 @@
       state: latest
   become: true
 
+- name: create kraken2 directory
+  file:
+    path: "{{ home }}/resources/kraken2"
+    state: directory
+    mode: 0775
+
+- name: download and unarchive kraken2
+  unarchive:
+    src: https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_08gb_20231009.tar.gz
+    dest: "{{ home }}/resources/kraken2"
+    remote_src: yes
+
 - name: install docker
   include_tasks: docker.yml
 
