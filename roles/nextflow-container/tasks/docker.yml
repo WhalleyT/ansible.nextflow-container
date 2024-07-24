@@ -19,6 +19,7 @@
 
 - name: docker | install/update docker
   apt:
+    allow_downgrade: yes
     state: present
     pkg:
       - "docker-ce={{ docker_version }}"
