@@ -19,7 +19,7 @@
 
 - name: lodestone | download and unarchive kraken2
   unarchive:
-    src: https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_16gb_20220908.tar.gz
+    src: https://genome-idx.s3.amazonaws.com/kraken/k2_viral_20240605.tar.gz
     dest: "{{ home }}/lodestone/kraken2"
     remote_src: yes
 
