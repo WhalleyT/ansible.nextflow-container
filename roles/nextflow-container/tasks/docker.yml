@@ -1,6 +1,7 @@
 ---
 - name: docker | install docker dependencies
   apt:
+    allow_downgrade: yes
     pkg:
       - apt-transport-https
       - ca-certificates
