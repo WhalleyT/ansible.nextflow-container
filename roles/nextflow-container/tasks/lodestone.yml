@@ -1,8 +1,8 @@
 ---
 - name: lodestone | clone the lodestone repository
   git:
-    repo: https://github.com/Pathogen-Genomics-Cymru/tb-pipeline.git
-    version: cardiff-testing
+    repo: https://github.com/Pathogen-Genomics-Cymru/lodestone.git
+    version: main
     dest: "{{ home }}/lodestone"
 
 - name: lodestone | create kraken2 directory
