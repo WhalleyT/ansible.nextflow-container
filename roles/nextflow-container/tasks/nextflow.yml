@@ -1,6 +1,6 @@
 ---
 - name: nextflow | install nextflow
-  shell: "wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v{{ nextflow_version }}/nextflow-{{ nextflow_version }} | bash"
+  shell: "wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v{{ nextflow_version }}/nextflow | bash"
 
 - name: nextflow | set permissions
   file:
