@@ -2,7 +2,7 @@
 
 home: "{{ lookup('env','HOME') }}"
 
-nextflow_version: 20.11.0-edge
+nextflow_version: 24.10.0
 
 singularity_version: v3.9.7
 
